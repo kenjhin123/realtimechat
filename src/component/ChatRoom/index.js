@@ -9,7 +9,6 @@ export default function ChatRoom({name}) {
   const [message,setMessge] = useState([])
   const inputRef = useRef()
   const srollTop = useRef()
-  const messageRever = message.reverse()
   useEffect(()=>{
     onValue(ref(database,'message'),(data)=>{
       let getMsg = [];
@@ -43,7 +42,7 @@ export default function ChatRoom({name}) {
             <ul
             ref={srollTop}
             className='list-none ml-5 h-[500px] overflow-y-scroll flex flex-col-reverse scroll-smooth pb-2'>
-              {messageRever.map((msg,index)=>{
+              {message.map((msg,index)=>{
                 return(
                     <li 
                     className='flex'
