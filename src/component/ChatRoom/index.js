@@ -3,6 +3,7 @@ import { database,ref,push,onValue } from '../../firebase/config'
 import { FaRegLaugh } from "react-icons/fa";
 import { formatRelative } from 'date-fns';
 import UserLogin from './UserLogin';
+import '../ChatRoom/index.css'
 
 export default function ChatRoom({name}) {
   const [iMess,setIMess] = useState("")
@@ -41,7 +42,7 @@ export default function ChatRoom({name}) {
           <div className='w-[70%] bg-white ml-2'>
             <ul
             ref={srollTop}
-            className='list-none ml-5 h-[500px] overflow-y-scroll flex flex-col-reverse scroll-smooth pb-2'>
+            className='list-none ml-5 h-[500px] overflow-y-scroll scroll-smooth pb-2 flexbox'>
               {message.map((msg,index)=>{
                 return(
                     <li 
