@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import imgList from '../../Image/img'
 function Login({callback}) {
-  console.log(imgList);
     const [yourName,setYourName] = useState("")
     const handleName = () =>{
         callback(yourName)

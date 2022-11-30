@@ -5,13 +5,14 @@ function UserLogin({message}) {
     
  const newArray = []
  message.forEach((element) => {
-    if(element.name === element.name){
+    if(element.name){
         newArray.push(element.name)
     }else{
         return
     }
  });
  const UserName = [...new Set(newArray)]
+ console.log(UserName);
   return (
     <div className='w-[30%] flex flex-col items-end'>
         

@@ -18,8 +18,7 @@ export default function ChatRoom({name}) {
       })
       setMessge(getMsg)
     })
-    
-  },[])
+    },[])
   const handleSendM = ()=>{
     const date = new Date()
     const seconds = Math.floor(date.getTime() / 1000);
@@ -65,7 +64,8 @@ export default function ChatRoom({name}) {
                 <input
                 ref={inputRef}
                 className='h-10 w-[300px] outline m-5'
-                type="text" value={iMess} 
+                type="text" 
+                value={iMess} 
                 onChange={e=>setIMess(e.target.value)}
                 placeholder='Chat gì đó đi nào! ~.~'></input>
               </form>
