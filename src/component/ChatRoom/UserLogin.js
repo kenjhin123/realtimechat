@@ -5,7 +5,7 @@ function UserLogin({message}) {
     
  const newArray = []
  message.forEach((element) => {
-    if(element.name == element.name){
+    if(element.name === element.name){
         newArray.push(element.name)
     }else{
         return
